@@ -1,0 +1,117 @@
+@import '@/styles/variables.scss';
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: $main-color-2;
+
+  .sidebar {
+    width: 280px;
+    background-color: $point-color-1;
+    padding: 1.5rem;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba($text-dark, 0.1);
+
+    .admin-profile {
+      display: flex;
+      align-items: center;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid rgba($text-white, 0.1);
+      margin-bottom: 1.5rem;
+
+      .profile-image {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-right: 1rem;
+        border: 2px solid $text-white;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .admin-info {
+        h3 {
+          color: $text-dark;
+          margin: 0;
+          font-size: 1rem;
+          font-weight: 600;
+        }
+
+        .role {
+          color: $sub-color-1;
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .menu {
+      .menu-item {
+        display: flex;
+        align-items: center;
+        padding: 0.8rem 1rem;
+        color: $text-dark;
+        text-decoration: none;
+        border-radius: 8px;
+        margin-bottom: 0.3rem;
+        transition: all 0.3s ease;
+
+        i {
+          width: 24px;
+          margin-right: 1rem;
+          text-align: center;
+        }
+
+        &:hover {
+          background-color: rgba($text-white, 0.1);
+        }
+
+        &.active {
+          background-color: $sub-color-1;
+          color: $text-white;
+        }
+      }
+    }
+  }
+
+  .main-content {
+    flex: 1;
+    margin-left: 280px;
+    padding: 2rem;
+  }
+}
+
+// 반응형 설계
+@media (max-width: 1024px) {
+  .admin-layout {
+    .sidebar {
+      width: 240px;
+    }
+    
+    .main-content {
+      margin-left: 240px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-layout {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+      padding: 1rem;
+    }
+    
+    .main-content {
+      margin-left: 0;
+      padding: 1rem;
+    }
+  }
+}

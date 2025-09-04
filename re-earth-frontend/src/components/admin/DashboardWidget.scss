@@ -1,0 +1,105 @@
+@import '@/styles/variables.scss';
+
+.dashboard-widget {
+  background: $text-white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba($text-dark, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba($text-dark, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .widget-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba($text-gray, 0.1);
+
+    h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: $text-dark;
+    }
+  }
+
+  .widget-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    // 차트 컨테이너
+    .chart-container {
+      flex: 1;
+      min-height: 200px;
+    }
+
+    // 리스트 스타일
+    .list-content {
+      .list-item {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid rgba($text-gray, 0.1);
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        .item-info {
+          flex: 1;
+        }
+
+        .item-value {
+          color: $point-color-2;
+          font-weight: 600;
+        }
+      }
+    }
+
+    // 통계 숫자
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $point-color-2;
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    // 진행 상태
+    .progress-container {
+      .progress-item {
+        margin-bottom: 1rem;
+
+        .progress-label {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 0.5rem;
+          
+          span {
+            color: $text-gray;
+            font-size: 0.9rem;
+          }
+        }
+
+        .progress-bar {
+          height: 8px;
+          background: rgba($main-color-1, 0.2);
+          border-radius: 4px;
+          overflow: hidden;
+
+          .progress {
+            height: 100%;
+            background: $main-color-1;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+          }
+        }
+      }
+    }
+  }
+}

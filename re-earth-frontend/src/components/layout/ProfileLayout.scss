@@ -1,0 +1,116 @@
+@import '@/styles/variables.scss';
+
+.profile-layout {
+   display: flex;
+   min-height: 100vh;
+   background-color: $main-color-2;
+
+   .sidebar {
+      width: 280px;
+      background-color: $point-color-1;
+      padding: 2rem 1rem;
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+
+      .user-profile {
+         text-align: center;
+         padding-bottom: 2rem;
+         border-bottom: 1px solid rgba($text-white, 0.1);
+         margin-bottom: 2rem;
+
+         .profile-image {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid $text-white;
+
+            img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+         }
+
+         .nickname {
+            color: $text-dark;
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+         }
+
+         .rank {
+            color: $sub-color-1;
+            font-size: 0.9rem;
+         }
+      }
+
+      .menu {
+         .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            color: $text-dark;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+
+            i {
+               margin-right: 1rem;
+               width: 20px;
+               text-align: center;
+            }
+
+            &:hover {
+               background-color: rgba($text-white, 0.1);
+            }
+
+            &.active {
+               background-color: $sub-color-1;
+               color: $text-white;
+            }
+         }
+      }
+   }
+
+   .main-content {
+      flex: 1;
+      margin-left: 280px;
+      padding: 2rem;
+
+      .section-title {
+         color: $text-dark;
+         font-size: 1.5rem;
+         margin-bottom: 2rem;
+      }
+
+      .card {
+         background: $text-white;
+         border-radius: 12px;
+         box-shadow: 0 2px 8px rgba($text-dark, 0.1);
+         padding: 2rem;
+      }
+   }
+}
+
+// 반응형 디자인
+@media (max-width: 768px) {
+   .profile-layout {
+      flex-direction: column;
+
+      .sidebar {
+         width: 100%;
+         height: auto;
+         position: relative;
+         padding: 1rem;
+      }
+
+      .main-content {
+         margin-left: 0;
+         padding: 1rem;
+      }
+   }
+}
