@@ -1,0 +1,140 @@
+@import '@/styles/variables.scss';
+
+.support-layout {
+   display: flex;
+   min-height: calc(100vh - 60px);
+   background-color: $main-color-2;
+
+   .sidebar {
+      width: 280px;
+      background-color: $text-white;
+      padding: 2rem 1rem;
+      box-shadow: 2px 0 5px rgba($text-dark, 0.1);
+      position: fixed;
+      height: 100%;
+
+      .menu-header {
+         padding-bottom: 1.5rem;
+         margin-bottom: 1.5rem;
+         border-bottom: 1px solid rgba($text-gray, 0.1);
+
+         h2 {
+            color: $text-dark;
+            font-size: 1.5rem;
+            margin: 0;
+         }
+      }
+
+      .menu {
+         .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            color: $text-dark;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+
+            i {
+               width: 24px;
+               margin-right: 1rem;
+               text-align: center;
+            }
+
+            &:hover {
+               background-color: rgba($main-color-1, 0.1);
+            }
+
+            &.active {
+               background-color: $point-color-1;
+               color: $text-dark;
+               font-weight: 500;
+            }
+         }
+      }
+   }
+
+   .main-content {
+      flex: 1;
+      margin-left: 280px;
+      padding: 2rem;
+
+      .page-header {
+         margin-bottom: 2rem;
+
+         h1 {
+            color: $text-dark;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+         }
+
+         .search-bar {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+
+            .category-filter {
+               min-width: 200px;
+            }
+
+            .search-input {
+               flex: 1;
+            }
+         }
+      }
+
+      .card {
+         background: $text-white;
+         border-radius: 12px;
+         box-shadow: 0 2px 8px rgba($text-dark, 0.1);
+         padding: 1.5rem;
+         margin-bottom: 1rem;
+      }
+
+      .btn-primary {
+         background-color: $point-color-2;
+         color: $text-white;
+         border: none;
+         padding: 0.75rem 1.5rem;
+         border-radius: 8px;
+         cursor: pointer;
+         transition: all 0.3s ease;
+
+         &:hover {
+            background-color: darken($point-color-2, 10%);
+         }
+      }
+   }
+}
+
+// 반응형 디자인
+@media (max-width: 1024px) {
+   .support-layout {
+      .sidebar {
+         width: 240px;
+      }
+
+      .main-content {
+         margin-left: 240px;
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .support-layout {
+      flex-direction: column;
+
+      .sidebar {
+         width: 100%;
+         height: auto;
+         position: relative;
+         padding: 1rem;
+      }
+
+      .main-content {
+         margin-left: 0;
+         padding: 1rem;
+      }
+   }
+}
