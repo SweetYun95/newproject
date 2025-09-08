@@ -1,6 +1,6 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import './UserLayout.scss'
+import './UserLayout.css'
 
 const UserLayout = () => {
    return (

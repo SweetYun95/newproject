@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import './SupportLayout.scss'
+import './SupportLayout.css'
 
 const SupportLayout = ({ children, isAdmin = false }) => {
    const location = useLocation()

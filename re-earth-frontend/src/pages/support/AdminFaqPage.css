@@ -1,0 +1,183 @@
+.admin-faq-page {
+  padding: 2rem;
+}
+
+.admin-faq-page .page-header {
+  margin-bottom: 2rem;
+}
+
+.admin-faq-page .page-header h1 {
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.admin-faq-page .dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.admin-faq-page .dashboard-grid .grid-item {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-faq-page .top-faqs .top-faq-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-faq-page .top-faqs .top-faq-item:last-child {
+  border-bottom: none;
+}
+
+.admin-faq-page .top-faqs .top-faq-item .rank {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary);
+  color: #ffffff;
+  border-radius: 50%;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.admin-faq-page .top-faqs .top-faq-item .question {
+  flex: 1;
+  font-size: 0.9rem;
+}
+
+.admin-faq-page .top-faqs .top-faq-item .views {
+  color: var(--gray);
+  font-size: 0.85rem;
+}
+
+.admin-faq-page .chart-container {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-faq-page .chart-container .placeholder-chart {
+  color: var(--gray);
+}
+
+.admin-faq-page .card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.admin-faq-page .faq-management .table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.admin-faq-page .faq-management .table-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.admin-faq-page .faq-management table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-faq-page .faq-management table th,
+.admin-faq-page .faq-management table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-faq-page .faq-management table th {
+  font-weight: 600;
+  color: var(--gray-dark);
+  background: #f8f9fa;
+}
+
+.admin-faq-page .faq-management table .actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.admin-faq-page .faq-management table .actions button {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.admin-faq-page .faq-management table .actions .btn-edit {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.admin-faq-page .faq-management table .actions .btn-delete {
+  background: var(--danger);
+  color: #ffffff;
+}
+
+.admin-faq-page .btn-add {
+  background: var(--success);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.admin-faq-page .ai-suggestions h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.admin-faq-page .ai-suggestions .suggestion-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.admin-faq-page .ai-suggestions .suggestion-item:last-child {
+  margin-bottom: 0;
+}
+
+.admin-faq-page .ai-suggestions .suggestion-item .suggestion-content h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.admin-faq-page .ai-suggestions .suggestion-item .suggestion-content p {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.admin-faq-page .ai-suggestions .suggestion-item .btn-add-suggestion {
+  background: var(--secondary);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .admin-faq-page .dashboard-grid { grid-template-columns: 1fr; }
+  .admin-faq-page .faq-management { overflow-x: auto; }
+  .admin-faq-page .faq-management table { min-width: 800px; }
+}

@@ -1,0 +1,111 @@
+.profile-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f2f6eb; /* $main-color-2 */
+}
+
+.profile-layout .sidebar {
+  width: 280px;
+  background-color: #ffce55; /* $point-color-1 */
+  padding: 2rem 1rem;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.profile-layout .sidebar .user-profile {
+  text-align: center;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 2rem;
+}
+
+.profile-layout .sidebar .user-profile .profile-image {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ffffff;
+}
+
+.profile-layout .sidebar .user-profile .profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-layout .sidebar .user-profile .nickname {
+  color: #333333;
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.profile-layout .sidebar .user-profile .rank {
+  color: #568265;
+  font-size: 0.9rem;
+}
+
+.profile-layout .sidebar .menu .menu-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  color: #333333;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.profile-layout .sidebar .menu .menu-item i {
+  margin-right: 1rem;
+  width: 20px;
+  text-align: center;
+}
+
+.profile-layout .sidebar .menu .menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.profile-layout .sidebar .menu .menu-item.active {
+  background-color: #568265;
+  color: #ffffff;
+}
+
+.profile-layout .main-content {
+  flex: 1;
+  margin-left: 280px;
+  padding: 2rem;
+}
+
+.profile-layout .main-content .section-title {
+  color: #333333;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.profile-layout .main-content .card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(51, 51, 51, 0.1);
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .profile-layout {
+    flex-direction: column;
+  }
+
+  .profile-layout .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 1rem;
+  }
+
+  .profile-layout .main-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import SupportLayout from '@/components/support/SupportLayout'
 import DashboardWidget from '@/components/admin/DashboardWidget'
-import './AdminFaqPage.scss'
+import './AdminFaqPage.css'
 
 const AdminFaqPage = () => {
    const [editingFaq, setEditingFaq] = useState(null)

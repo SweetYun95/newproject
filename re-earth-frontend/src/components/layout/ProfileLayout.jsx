@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link, useLocation } from 'react-router-dom'
-import './ProfileLayout.scss'
+import './ProfileLayout.css'
 
 const ProfileLayout = ({ children }) => {
    const location = useLocation()

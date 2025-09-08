@@ -1,6 +1,6 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import './GuestLayout.scss'
+import './GuestLayout.css'
 
 const GuestLayout = () => {
    return (

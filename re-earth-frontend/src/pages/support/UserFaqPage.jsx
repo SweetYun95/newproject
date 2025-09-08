@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import SupportLayout from '@/components/support/SupportLayout'
 import FaqAccordion from '@/components/support/FaqAccordion'
-import './UserFaqPage.scss'
+import './UserFaqPage.css'
 
 const UserFaqPage = () => {
    const navigate = useNavigate()

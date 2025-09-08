@@ -1,5 +1,5 @@
 import React from 'react'
-import './DashboardWidget.scss'
+import './DashboardWidget.css'
 
 const DashboardWidget = ({ title, children, className = '' }) => {
    return (

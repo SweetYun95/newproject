@@ -1,7 +1,7 @@
-import React from 'react'
-import AdminLayout from '@/components/layout/AdminLayout'
-import DashboardWidget from '@/components/admin/DashboardWidget'
-import './DashboardPage.scss'
+import React from 'react';
+import AdminLayout from '@/components/layout/AdminLayout';
+import DashboardWidget from '@/components/admin/DashboardWidget';
+import './DashboardPage.css';
 
 const DashboardPage = () => {
    return (

@@ -1,0 +1,21 @@
+.user-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-layout .user-header {
+  background-color: #92c3a4; /* $primary */
+  padding: 1rem 0;
+}
+
+.user-layout .user-main {
+  flex: 1;
+  padding: 2rem 0;
+}
+
+.user-layout .user-footer {
+  background-color: #333333; /* $text-dark */
+  color: #ffffff; /* $text-white */
+  padding: 2rem 0;
+}
