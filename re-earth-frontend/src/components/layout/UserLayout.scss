@@ -1,0 +1,21 @@
+.user-layout {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+
+   .user-header {
+      background-color: $primary;
+      padding: 1rem 0;
+   }
+
+   .user-main {
+      flex: 1;
+      padding: 2rem 0;
+   }
+
+   .user-footer {
+      background-color: $text-dark;
+      color: $text-white;
+      padding: 2rem 0;
+   }
+}

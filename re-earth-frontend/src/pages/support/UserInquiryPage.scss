@@ -1,0 +1,146 @@
+@import '@/styles/variables.scss';
+
+.user-inquiry-page {
+   .card {
+      background: $text-white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba($text-dark, 0.1);
+      padding: 2rem;
+      margin-bottom: 2rem;
+   }
+
+   .inquiry-form {
+      .form-group {
+         margin-bottom: 1.5rem;
+
+         label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: $text-dark;
+            font-weight: 500;
+         }
+
+         select,
+         input,
+         textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid rgba($text-gray, 0.2);
+            border-radius: 8px;
+            outline: none;
+            color: $text-dark;
+            transition: all 0.3s ease;
+
+            &:focus {
+               border-color: $main-color-1;
+               box-shadow: 0 0 0 2px rgba($main-color-1, 0.1);
+            }
+         }
+
+         textarea {
+            resize: vertical;
+            min-height: 120px;
+         }
+
+         .file-input {
+            input[type='file'] {
+               padding: 0.5rem 0;
+               border: none;
+            }
+
+            small {
+               display: block;
+               color: $text-gray;
+               margin-top: 0.25rem;
+            }
+         }
+      }
+
+      .btn-submit {
+         background-color: $point-color-2;
+         color: $text-white;
+         border: none;
+         padding: 0.75rem 2rem;
+         border-radius: 8px;
+         font-weight: 500;
+         cursor: pointer;
+         transition: all 0.3s ease;
+
+         &:hover {
+            background-color: darken($point-color-2, 10%);
+         }
+      }
+   }
+
+   .inquiry-list {
+      h2 {
+         color: $text-dark;
+         font-size: 1.25rem;
+         margin-bottom: 1.5rem;
+      }
+
+      table {
+         width: 100%;
+         border-collapse: collapse;
+
+         th,
+         td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba($text-gray, 0.1);
+         }
+
+         th {
+            color: $text-dark;
+            font-weight: 500;
+            background-color: rgba($main-color-2, 0.5);
+         }
+
+         td {
+            color: $text-dark;
+
+            &.title {
+               font-weight: 500;
+            }
+
+            .status {
+               display: inline-block;
+               padding: 0.25rem 0.75rem;
+               border-radius: 15px;
+               font-size: 0.875rem;
+               font-weight: 500;
+
+               &.status-pending {
+                  background-color: $sub-color-2;
+                  color: $text-dark;
+               }
+
+               &.status-completed {
+                  background-color: $main-color-1;
+                  color: $text-white;
+               }
+            }
+         }
+      }
+   }
+}
+
+// 반응형 디자인
+@media (max-width: 768px) {
+   .user-inquiry-page {
+      .inquiry-list {
+         table {
+            th:nth-child(1),
+            td:nth-child(1) {
+               display: none;
+            }
+
+            th,
+            td {
+               padding: 0.75rem;
+               font-size: 0.9rem;
+            }
+         }
+      }
+   }
+}
