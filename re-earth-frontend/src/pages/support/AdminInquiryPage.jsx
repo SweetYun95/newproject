@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import SupportLayout from '@/components/support/SupportLayout'
 import DashboardWidget from '@/components/admin/DashboardWidget'
-import './AdminInquiryPage.scss'
+import './AdminInquiryPage.css'
 
 const AdminInquiryPage = () => {
    const [selectedInquiry, setSelectedInquiry] = useState(null)

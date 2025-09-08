@@ -1,0 +1,264 @@
+.admin-inquiry-page {
+   padding: 2rem;
+}
+
+.admin-inquiry-page .page-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 2rem;
+}
+.admin-inquiry-page .page-header h1 {
+   color: var(--primary);
+   font-size: 2rem;
+   font-weight: 600;
+}
+.admin-inquiry-page .page-header .header-stats {
+   display: flex;
+   gap: 1rem;
+}
+.admin-inquiry-page .page-header .header-stats .stat {
+   padding: 0.5rem 1rem;
+   border-radius: 4px;
+   font-size: 0.9rem;
+   font-weight: 500;
+}
+.admin-inquiry-page .page-header .header-stats .stat.urgent {
+   background: var(--danger-light);
+   color: var(--danger);
+}
+.admin-inquiry-page .page-header .header-stats .stat.pending {
+   background: var(--warning-light);
+   color: var(--warning);
+}
+
+.admin-inquiry-page .dashboard-grid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 2rem;
+   margin-bottom: 2rem;
+}
+.admin-inquiry-page .dashboard-grid .grid-item {
+   background: #fff;
+   border-radius: 8px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-inquiry-page .inquiry-stats {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 1rem;
+   padding: 1rem;
+}
+.admin-inquiry-page .inquiry-stats .stat-item {
+   text-align: center;
+   padding: 1rem;
+   border-radius: 8px;
+   background: #f8f9fa;
+}
+.admin-inquiry-page .inquiry-stats .stat-item.pending {
+   background: var(--warning-light);
+}
+.admin-inquiry-page .inquiry-stats .stat-item.pending .value {
+   color: var(--warning);
+}
+.admin-inquiry-page .inquiry-stats .stat-item.progress {
+   background: var(--info-light);
+}
+.admin-inquiry-page .inquiry-stats .stat-item.progress .value {
+   color: var(--info);
+}
+.admin-inquiry-page .inquiry-stats .stat-item.completed {
+   background: var(--success-light);
+}
+.admin-inquiry-page .inquiry-stats .stat-item.completed .value {
+   color: var(--success);
+}
+.admin-inquiry-page .inquiry-stats .stat-item .label {
+   display: block;
+   font-size: 0.85rem;
+   color: var(--gray);
+   margin-bottom: 0.5rem;
+}
+.admin-inquiry-page .inquiry-stats .stat-item .value {
+   font-size: 1.5rem;
+   font-weight: 600;
+}
+
+.admin-inquiry-page .chart-container {
+   height: 300px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.admin-inquiry-page .chart-container .placeholder-chart {
+   color: var(--gray);
+}
+
+.admin-inquiry-page .card {
+   background: #fff;
+   border-radius: 8px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   padding: 1.5rem;
+   margin-bottom: 2rem;
+}
+
+.admin-inquiry-page .inquiry-management .table-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 1rem;
+   gap: 1rem;
+}
+.admin-inquiry-page .inquiry-management .table-header .filters {
+   display: flex;
+   gap: 1rem;
+}
+.admin-inquiry-page .inquiry-management .table-header .filters select {
+   padding: 0.5rem;
+   border: 1px solid #ddd;
+   border-radius: 4px;
+   min-width: 150px;
+}
+.admin-inquiry-page .inquiry-management .table-header .search {
+   display: flex;
+   gap: 0.5rem;
+}
+.admin-inquiry-page .inquiry-management .table-header .search input {
+   padding: 0.5rem;
+   border: 1px solid #ddd;
+   border-radius: 4px;
+   min-width: 250px;
+}
+.admin-inquiry-page .inquiry-management .table-header .search .btn-search {
+   padding: 0.5rem 1rem;
+   background: var(--primary);
+   color: #fff;
+   border-radius: 4px;
+}
+
+.admin-inquiry-page .inquiry-management table {
+   width: 100%;
+   border-collapse: collapse;
+}
+.admin-inquiry-page .inquiry-management table th,
+.admin-inquiry-page .inquiry-management table td {
+   padding: 1rem;
+   text-align: left;
+   border-bottom: 1px solid #eee;
+}
+.admin-inquiry-page .inquiry-management table th {
+   font-weight: 600;
+   color: var(--gray-dark);
+   background: #f8f9fa;
+}
+
+.admin-inquiry-page .inquiry-management table .priority {
+   padding: 0.25rem 0.5rem;
+   border-radius: 4px;
+   font-size: 0.85rem;
+}
+.admin-inquiry-page .inquiry-management table .priority.high {
+   background: var(--danger-light);
+   color: var(--danger);
+}
+.admin-inquiry-page .inquiry-management table .priority.normal {
+   background: var(--secondary-light);
+   color: var(--secondary);
+}
+
+.admin-inquiry-page .inquiry-management table .status {
+   padding: 0.25rem 0.5rem;
+   border-radius: 4px;
+   font-size: 0.85rem;
+}
+.admin-inquiry-page .inquiry-management table .status.status-pending {
+   background: var(--warning-light);
+   color: var(--warning);
+}
+.admin-inquiry-page .inquiry-management table .status.status-progress {
+   background: var(--info-light);
+   color: var(--info);
+}
+.admin-inquiry-page .inquiry-management table .status.status-completed {
+   background: var(--success-light);
+   color: var(--success);
+}
+
+.admin-inquiry-page .inquiry-management table .actions .btn-reply {
+   padding: 0.25rem 0.75rem;
+   background: var(--primary);
+   color: #fff;
+   border-radius: 4px;
+   font-size: 0.85rem;
+}
+
+.admin-inquiry-page .auto-response h2 {
+   font-size: 1.25rem;
+   font-weight: 600;
+   margin-bottom: 1rem;
+}
+.admin-inquiry-page .auto-response .suggestion-item {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   padding: 1rem;
+   border: 1px solid #eee;
+   border-radius: 4px;
+}
+.admin-inquiry-page .auto-response .suggestion-item .suggestion-content {
+   flex: 1;
+   margin-right: 1rem;
+}
+.admin-inquiry-page .auto-response .suggestion-item .suggestion-content h3 {
+   font-size: 1rem;
+   font-weight: 500;
+   margin-bottom: 0.5rem;
+}
+.admin-inquiry-page .auto-response .suggestion-item .suggestion-content .template {
+   color: var(--gray);
+   font-size: 0.9rem;
+   line-height: 1.5;
+}
+.admin-inquiry-page .auto-response .suggestion-item .btn-use-template {
+   padding: 0.5rem 1rem;
+   background: var(--secondary);
+   color: #fff;
+   border-radius: 4px;
+   font-size: 0.85rem;
+   white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+   .admin-inquiry-page .page-header {
+      flex-direction: column;
+      gap: 1rem;
+   }
+   .admin-inquiry-page .page-header .header-stats {
+      width: 100%;
+   }
+   .admin-inquiry-page .dashboard-grid {
+      grid-template-columns: 1fr;
+   }
+   .admin-inquiry-page .inquiry-stats {
+      grid-template-columns: repeat(2, 1fr);
+   }
+   .admin-inquiry-page .inquiry-management {
+      overflow-x: auto;
+   }
+   .admin-inquiry-page .inquiry-management .table-header {
+      flex-direction: column;
+   }
+   .admin-inquiry-page .inquiry-management .table-header .filters {
+      width: 100%;
+   }
+   .admin-inquiry-page .inquiry-management .table-header .search {
+      width: 100%;
+   }
+   .admin-inquiry-page .inquiry-management .table-header .search input {
+      flex: 1;
+   }
+   .admin-inquiry-page .inquiry-management table {
+      min-width: 1000px;
+   }
+}

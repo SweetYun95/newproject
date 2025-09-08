@@ -1,0 +1,115 @@
+/* re-earth-frontend/src/pages/LandingPage.css */
+.landing-page section {
+   font-weight: bold;
+   margin-bottom: 0.5rem;
+   color: rgb(255, 206, 85);
+}
+
+.landing-page .stats-section .stats-item p {
+   font-size: 1.2rem;
+}
+
+.landing-page .stats-section .cta-buttons p {
+   font-size: 1.5rem;
+   margin-bottom: 2rem;
+}
+
+.landing-page .stats-section .cta-buttons .btn {
+   display: inline-block;
+   padding: 1rem 2rem;
+   margin: 0.5rem;
+   border-radius: 50px;
+   font-size: 1.1rem;
+   transition: all 0.3s ease;
+}
+
+.landing-page .stats-section .cta-buttons .btn.btn-primary {
+   background: rgb(251, 110, 82);
+   color: rgb(255, 255, 255);
+   border: none;
+}
+
+.landing-page .stats-section .cta-buttons .btn.btn-primary:hover {
+   background: #fa4420;
+}
+
+.landing-page .stats-section .cta-buttons .btn.btn-outline {
+   background: transparent;
+   border: 2px solid rgb(255, 255, 255);
+   color: rgb(255, 255, 255);
+}
+
+.landing-page .stats-section .cta-buttons .btn.btn-outline:hover {
+   background: rgb(255, 255, 255);
+   color: rgb(146, 195, 164);
+}
+
+/* Section 8: Partners */
+.landing-page .partners-section {
+   background-color: rgb(242, 246, 235);
+}
+
+.landing-page .partners-section h2 {
+   color: rgb(86, 130, 101);
+   font-size: 2.5rem;
+   text-align: center;
+   margin-bottom: 4rem;
+}
+
+.landing-page .partners-section .partner-logos {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 3rem;
+}
+
+.landing-page .partners-section .partner-logos .logo-item {
+   width: 180px;
+   height: 100px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.landing-page .partners-section .partner-logos .logo-item img {
+   max-width: 100%;
+   max-height: 100%;
+   object-fit: contain;
+   filter: grayscale(100%);
+   transition: filter 0.3s ease;
+}
+
+.landing-page .partners-section .partner-logos .logo-item img:hover {
+   filter: grayscale(0%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+   .landing-page section {
+      padding: 3rem 0;
+   }
+   .landing-page .hero-section .main-slogan {
+      font-size: 2.5rem;
+   }
+   .landing-page .rotating-section .sub-slogan {
+      font-size: 2rem;
+   }
+   .landing-page .problems-section .section-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 3rem;
+   }
+   .landing-page .practice-card {
+      width: calc(100% - 2rem) !important;
+      position: relative !important;
+      margin-bottom: 2rem;
+   }
+   .landing-page .stats-section .stats-item .number {
+      font-size: 2.5rem;
+   }
+   .landing-page .partner-logos .logo-item {
+      width: 140px;
+      height: 80px;
+   }
+}

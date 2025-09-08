@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
-import './AdminLayout.scss';
+import './AdminLayout.css';
 
 const AdminLayout = ({ children }) => {
   const location = useLocation();

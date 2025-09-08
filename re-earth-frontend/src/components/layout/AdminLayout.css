@@ -1,0 +1,107 @@
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f2f6eb; /* $main-color-2 */
+}
+
+.admin-layout .sidebar {
+  width: 280px;
+  background-color: #ffce55; /* $point-color-1 */
+  padding: 1.5rem;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(51, 51, 51, 0.1); /* $text-dark */
+}
+
+.admin-layout .sidebar .admin-profile {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* $text-white */
+  margin-bottom: 1.5rem;
+}
+
+.admin-layout .sidebar .admin-profile .profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-right: 1rem;
+  border: 2px solid #ffffff; /* $text-white */
+}
+
+.admin-layout .sidebar .admin-profile .profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-layout .sidebar .admin-profile .admin-info h3 {
+  color: #333333; /* $text-dark */
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.admin-layout .sidebar .admin-profile .admin-info .role {
+  color: #568265; /* $sub-color-1 */
+  font-size: 0.8rem;
+}
+
+.admin-layout .sidebar .menu .menu-item {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  color: #333333; /* $text-dark */
+  text-decoration: none;
+  border-radius: 8px;
+  margin-bottom: 0.3rem;
+  transition: all 0.3s ease;
+}
+
+.admin-layout .sidebar .menu .menu-item i {
+  width: 24px;
+  margin-right: 1rem;
+  text-align: center;
+}
+
+.admin-layout .sidebar .menu .menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* $text-white */
+}
+
+.admin-layout .sidebar .menu .menu-item.active {
+  background-color: #568265; /* $sub-color-1 */
+  color: #ffffff; /* $text-white */
+}
+
+.admin-layout .main-content {
+  flex: 1;
+  margin-left: 280px;
+  padding: 2rem;
+}
+
+/* 반응형 설계 */
+@media (max-width: 1024px) {
+  .admin-layout .sidebar {
+    width: 240px;
+  }
+
+  .admin-layout .main-content {
+    margin-left: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-layout .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 1rem;
+  }
+
+  .admin-layout .main-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}

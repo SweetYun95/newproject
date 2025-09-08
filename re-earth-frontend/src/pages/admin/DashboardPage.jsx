@@ -1,7 +1,7 @@
 import React from 'react';
 import AdminLayout from '@/components/layout/AdminLayout';
 import DashboardWidget from '@/components/admin/DashboardWidget';
-import './DashboardPage.scss';
+import './DashboardPage.css';
 
 const DashboardPage = () => {
   return (

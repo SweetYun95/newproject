@@ -1,6 +1,7 @@
+// re-earth-frontend/src/pages/public/LandingPage.jsx
 import React, { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import './LandingPage.scss'
+import './LandingPage.css'
 
 const LandingPage = () => {
    const [activeTab, setActiveTab] = useState(0)

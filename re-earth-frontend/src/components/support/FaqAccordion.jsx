@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './FaqAccordion.scss'
+import './FaqAccordion.css'
 
 const FaqAccordion = ({ faq }) => {
    const [isOpen, setIsOpen] = useState(false)

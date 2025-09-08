@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import SupportLayout from '@/components/support/SupportLayout'
-import './UserInquiryPage.scss'
+import './UserInquiryPage.css'
 
 const UserInquiryPage = () => {
    const [inquiryForm, setInquiryForm] = useState({
