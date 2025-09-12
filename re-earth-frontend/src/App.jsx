@@ -1,7 +1,7 @@
 import { Provider } from 'react-redux'
 import { store } from './app/store'
 import AppRouter from './routes/AppRouter'
-import './styles/main.scss'
+import './index.css'
 
 function App() {
    return (
@@ -10,3 +10,5 @@ function App() {
       </Provider>
    )
 }
+
+export default App

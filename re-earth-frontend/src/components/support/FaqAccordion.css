@@ -1,0 +1,77 @@
+.faq-accordion {
+  background: #ffffff; /* $text-white */
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(51, 51, 51, 0.05); /* $text-dark */
+  overflow: hidden;
+}
+
+.faq-accordion.active .accordion-header {
+  background-color: #ffce55; /* $point-color-1 */
+}
+
+.faq-accordion.active .accordion-content {
+  max-height: 500px;
+  padding: 1.5rem;
+}
+
+.faq-accordion .accordion-header {
+  width: 100%;
+  padding: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  background: #ffffff; /* $text-white */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-accordion .accordion-header:hover {
+  background-color: rgba(255, 206, 85, 0.1); /* rgba($point-color-1, 0.1) */
+}
+
+.faq-accordion .accordion-header .question {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+  color: #333333; /* $text-dark */
+}
+
+.faq-accordion .accordion-header .question .q-mark {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fb6e52; /* $point-color-2 */
+}
+
+.faq-accordion .accordion-header i {
+  color: #9e9e9e; /* $text-gray */
+  transition: transform 0.3s ease;
+}
+
+.faq-accordion .accordion-content {
+  max-height: 0;
+  padding: 0 1.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.5); /* rgba($text-white, 0.5) */
+}
+
+.faq-accordion .accordion-content .answer {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.faq-accordion .accordion-content .answer .a-mark {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #92c3a4; /* $main-color-1 */
+}
+
+.faq-accordion .accordion-content .answer p {
+  margin: 0;
+  color: #333333; /* $text-dark */
+  line-height: 1.6;
+}
